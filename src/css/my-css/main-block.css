@@ -1,0 +1,20 @@
+body {
+    font-family: 'Golos';
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-size: 15px;
+    line-height: 148%;
+    --slider-color: #fff;
+}
+
+header,
+main,
+footer {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body.no-scroll {
+    overflow: hidden;
+    height: 100vw;
+}

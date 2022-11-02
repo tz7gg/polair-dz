@@ -1,0 +1,142 @@
+.useful-links {
+    display: flex;
+    padding: 64px 120px;
+    align-items: flex-end;
+    justify-content: space-between;
+    @media (max-width: 1439px) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding-top: 52px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 52px;
+    }
+    &__content {
+        max-width: 282px;
+        padding-bottom: 32px;
+        @media (max-width: 1023px) {
+            margin-right: 16px;
+        }
+        @media (max-width: 768px) {
+            margin-right: 0;
+            max-width: unset;
+        }
+        &__text {
+            font-size: 13px;
+            line-height: 140%;
+            color: #888888;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding-bottom: 8px;
+            @media (max-width: 768px) {
+                font-size: 12px;
+                line-height: 140%;
+            }
+        }
+        &__title {
+            font-size: 29px;
+            line-height: 116%;
+            font-family: 'Golos-medium';
+            color: #003154;
+            padding-bottom: 16px;
+            @media (max-width: 768px) {
+                font-size: 27px;
+                line-height: 116%;
+            }
+        }
+        &__des {
+            font-size: 15px;
+            line-height: 174%;
+            color: #404040;
+        }
+    }
+    &__items {
+        display: flex;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+        &__item {
+            max-width: 384px;
+            position: relative;
+            @media (max-width: 768px) {
+                max-width: unset;
+            }
+            &::after {
+                position: absolute;
+                height: 77%;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                content: '';
+                background: #F2F6FB;
+                z-index: 1;
+            }
+            &:first-child {
+                margin-right: 24px;
+                @media (max-width: 768px) {
+                    margin-right: 0;
+                    margin-bottom: 40px;
+                }
+            }
+            &__img {
+                z-index: 2;
+                width: 100%;
+                margin-bottom: 32px;
+                position: relative;
+            }
+            &__content {
+                position: relative;
+                z-index: 2;
+                padding-bottom: 40px;
+                padding-left: 32px;
+                padding-right: 32px;
+                @media (max-width: 768px) {
+                    padding-left: 16px;
+                    padding-right: 16px;
+                    padding-bottom: 24px;
+                }
+                &__title {
+                    font-size: 24px;
+                    line-height: 110%;
+                    font-family: 'Golos-medium';
+                    color: #1E1E1E;
+                    padding-bottom: 16px;
+                    @media (max-width: 768px) {
+                        font-size: 23px;
+                        line-height: 110%;
+                    }
+                }
+                &__des {
+                    font-size: 15px;
+                    line-height: 174%;
+                    color: #404040;
+                    padding-bottom: 40px;
+                }
+                &__btn {
+                    color: #fff;
+                    padding: 10px 30px;
+                    background-color: #fff;
+                    background: #003154;
+                    border: 2px solid #003154;
+                    border-radius: 2px;
+                    width: max-content;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                    text-decoration: none;
+                    display: inline-block;
+                    &:hover {
+                        background-color: #fff;
+                        color: #003154;
+                    }
+                    @media (max-width: 768px) {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

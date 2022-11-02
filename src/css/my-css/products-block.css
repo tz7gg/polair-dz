@@ -1,0 +1,109 @@
+.products {
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 80px;
+    padding-top: 48px;
+    display: flex;
+    @media (max-width: 1439px) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    @media (max-width: 768px) {
+        padding-top: 46px;
+        flex-direction: column;
+        padding-bottom: 52px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    &__catalog {
+        margin-right: 120px;
+        @media (max-width: 1439px) {
+            margin-right: 32px;
+        }
+        &__title {
+            margin-top: 32px;
+            font-family: "Golos-medium";
+            font-size: 29px;
+            line-height: 116%;
+            color: #003154;
+            margin-bottom: 24px;
+            @media (max-width: 768px) {
+                margin-top: 0;
+                font-size: 27px;
+                line-height: 116%;
+                margin-bottom: 14px;
+            }
+        }
+        &__link {
+            display: flex;
+            align-items: baseline;
+            transition: all 0.2s;
+            text-decoration: none;
+            color: #404040;
+            @media (max-width: 768px) {
+                margin-bottom: 4px;
+            }
+            &:hover {
+                color: #003154;
+            }
+            &:hover &__icon {
+                transform: translateX(3px);
+            }
+            &__icon {
+                margin-left: 9.5px;
+                width: 4px;
+                height: 8px;
+                transition: all 0.2s;
+            }
+        }
+    }
+    &__items {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        @media (max-width: 1199px) {
+            flex-wrap: wrap;
+        }
+        &__wrap {
+            width: 200px;
+            padding-left: 16px;
+            border-left: 1px solid #E1E1E1;
+            height: max-content;
+            margin-top: 32px;
+            margin-right: 16px;
+            @media (max-width: 768px) {
+                margin-top: 32px;
+                width: 100%;
+                margin-right: 0;
+            }
+            &__item {
+                font-size: 17px;
+                line-height: 158%;
+                padding-bottom: 18px;
+                display: block;
+                text-decoration: none;
+                color: #1E1E1E;
+                position: relative;
+                @media (max-width: 768px) {
+                    padding-bottom: 14px;
+                }
+                &:last-child {
+                    padding-bottom: 0px;
+                }
+                &:after {
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: #003154;
+                    content: "";
+                    transition: width 0.2s ease-out;
+                }
+                &:hover:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

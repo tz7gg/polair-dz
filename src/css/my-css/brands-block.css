@@ -1,0 +1,73 @@
+.brands {
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 64px;
+    padding-bottom: 24px;
+    @media (max-width: 1439px) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    @media (max-width: 768px) {
+        padding: 46px 16px;
+        padding-bottom: 52px;
+    }
+    &__title {
+        font-size: 29px;
+        line-height: 116%;
+        font-family: "Golos-medium";
+        color: #003154;
+        padding-bottom: 40px;
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+    &__items {
+        margin-left: -24px;
+        display: flex;
+        flex-wrap: wrap;
+        @media (max-width: 768px) {
+            flex-wrap: nowrap;
+            overflow-y: scroll;
+        }
+        &__item {
+            padding-left: 24px;
+            padding-right: 12px;
+            width: calc(100% / 4);
+            cursor: pointer;
+            margin-bottom: 40px;
+            text-decoration: none;
+            @media (max-width: 768px) {
+                min-width: calc(100vw - 16px);
+                width: 100%;
+                padding-right: 0;
+            }
+            &__wrap {
+                padding-left: 16px;
+                border-left: 1px solid #E1E1E1;
+                height: 100%;
+                &__logo {
+                    transition: all 0.2s;
+                    margin-bottom: 8px;
+                    filter: grayscale(100%);
+                    opacity: 0.4
+                }
+                &__text {
+                    font-size: 14px;
+                    line-height: 158%;
+                    color: #888888;
+                    transition: all 0.2s;
+                }
+            }
+            &:hover &__wrap__text {
+                color: #404040;
+            }
+            &:hover &__wrap__logo {
+                filter: grayscale(0%);
+                opacity: 1
+            }
+            path {
+                transition: all 0.2s;
+            }
+        }
+    }
+}
